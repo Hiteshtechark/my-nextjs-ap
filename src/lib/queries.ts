@@ -1,4 +1,4 @@
-const baseUrl = process.env.WORDPRESS_URL;
+const baseUrl = "https://hitesh.tekark.com";
 import { ExtendedPost, Category, Author } from "@/lib/types";
 
 const revalidateTime: number = 86400 // one day in seconds;
@@ -15,7 +15,7 @@ export async function getAllPosts(pageNumber: number = 1, perPage: number = 10, 
   }
 
   // console.log(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`)
-  const response = await fetch(`${baseUrl}/wp-json/wp/v2/jobs?${params.toString()}`, {
+  const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`, {
     next: {
       revalidate: revalidateTime,
     },
@@ -26,7 +26,7 @@ export async function getAllPosts(pageNumber: number = 1, perPage: number = 10, 
 }
 
 export async function getPostBySlug(slug: string): Promise<ExtendedPost | null> {
-  const response = await fetch(`${baseUrl}/wp-json/wp/v2/jobs?slug=${slug}`, {
+  const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?slug=${slug}`, {
     next: {
       revalidate: revalidateTime,
     },
