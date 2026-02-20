@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NextJs 15 Headless WordPress Blog
 Headless WordPress blog with Next.js 15 App Router and TypeScript
 
@@ -33,3 +34,6 @@ Now you should be able to visit your project under: localhost:3000
 
 
 That's all.
+=======
+# my-nextjs-ap
+>>>>>>> 179a2ce744c2d4fa11fb2b32265e7a57a18cc6c9
